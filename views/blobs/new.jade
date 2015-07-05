@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#formAddBlob(name="addblob",method="post",action="/blobs")
+        p Name: 
+            input#inputName(type="text", placeholder="ex. John Smith", name="name")
+        p User ID:
+            input#inputBadge(type="text", placeholder="subodh-12", name="badge")
+        p DOB: 
+            input#inputDob(type="date", name="dob")
+        p Want to Subscribe?: 
+            input#inputIsLoved(type="checkbox", name="isloved")
+        p
+            button#btnSubmit(type="submit") submit
